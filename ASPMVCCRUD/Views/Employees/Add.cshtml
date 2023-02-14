@@ -1,0 +1,32 @@
+﻿@model ASPMVCCRUD.Models.AddEmployeeViewModel
+
+@{
+}
+
+<h1 class="mt-3">Add Employee</h1>
+<form method="post" action="Add" class="mt-5">
+    @* akan pergi ke method Post yang dimana letak di Controller *@
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="type" class="form-control" asp-for="Name">
+        @* Mengartikan bahwa box label terdapat fungsi *@
+        @* untuk properti "Name" begitu dengan lain nya *@
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email Address</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Salary</label>
+        <input type="number" class="form-control" asp-for="Salary">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Date Of Birth</label>
+        <input type="date" class="form-control" asp-for="DateOfBirth">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Department</label>
+        <input type="text" class="form-control" asp-for="Department">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

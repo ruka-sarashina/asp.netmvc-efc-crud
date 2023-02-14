@@ -1,7 +1,15 @@
+using ASPMVCCRUD.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<MVCDEMODbContext>(options =>
+  options.UseSqlServer(builder.Configuration.GetConnectionString("MvcDemo")));
+// samakan nama mysql nya yang terdapat di json
+
 
 var app = builder.Build();
 
